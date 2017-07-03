@@ -26,9 +26,17 @@ class Local implements AdapterInterface
     /*
     public function file_append_contents($filename, $data)
     {
-
+        $dir = dirname($filename);
+        if ( !file_exists($dir)) {
+            if ( !mkdir($dir, 0777, true)) {
+                return false;
+            }
+            chmod($dir, 0777);
+        }
+        file_put_contents($filename, $data, FILE_APPEND);
     }
     */
+
 
     public function file_delete($filename)
     {

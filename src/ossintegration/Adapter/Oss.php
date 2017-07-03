@@ -46,11 +46,14 @@ class Oss implements AdapterInterface
     }
 
     /*
+     * oss追加上传api设计的不好；和文件操作差异较大,不太好做统一的api,如果要用的话建议用各自原生的api,暴露公用方法,但这和初衷不一致
     public function file_append_contents($filename, $data)
     {
 
+
     }
     */
+
 
     public function file_delete($filename)
     {

@@ -34,11 +34,14 @@ $filenameOssDest = 'Users/emily/data/oss/localdata2.dat';
 $mountOss->put_file($filenameLocal, $filenameOssDest);//上传本地文件
 var_dump($mountOss->file_get_contents($filenameOssDest));
 
+
 //file_exist&file_delete
 $mountLocal->file_delete($filenameLocal);
 var_dump($mountLocal->file_exist($filenameLocal));
 $mountOss->file_delete($filenameOss);
 var_dump($mountOss->file_exist($filenameOss));
+
+
 
 
 
