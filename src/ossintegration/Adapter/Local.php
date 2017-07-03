@@ -45,6 +45,11 @@ class Local implements AdapterInterface
         return file_get_contents($filename);
     }
 
+    /**
+     * @desc 本地文件拷贝
+     * @param $source
+     * @param $dest
+     */
     public function put_file($source, $dest)
     {
         copy($source, $dest);

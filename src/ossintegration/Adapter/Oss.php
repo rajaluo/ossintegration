@@ -69,6 +69,12 @@ class Oss implements AdapterInterface
         return $content;
     }
 
+    /**
+     * @desc 本地文件上传到oss
+     * @param $source
+     * @param $dest
+     * @throws OssException
+     */
     public function put_file($source, $dest)
     {
         $this->_ossClient->uploadFile($this->_bucket, $dest, $source);
