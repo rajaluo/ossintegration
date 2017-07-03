@@ -1,0 +1,34 @@
+{
+  "name": "rajaluo/ossintegration",
+  "description": "oss integration with local file system",
+  "license": "Apache-2.0",
+  "type": "library",
+  "keywords": [
+    "oss"
+  ],
+  "authors": [
+    {
+      "name": "rajaluo",
+      "email": "pianowh@163.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "ossintegration\\": "src/ossintegration/"
+    }
+  },
+  "require": {
+	"php":">=5.3",
+    "monolog/monolog": "^1.13",
+    "aliyuncs/oss-sdk-php": "~2.0"
+  },
+  "repositories": {
+    "packagist": {
+      "type": "composer",
+      "url": "https://packagist.phpcomposer.com"
+    }
+  },
+  "require-dev": {
+
+  }
+}
