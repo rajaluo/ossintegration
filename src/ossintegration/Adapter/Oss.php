@@ -19,6 +19,11 @@ class Oss extends AbstractAdapter
         $this->_bucket = $bucket;
     }
 
+    public function getBucket()
+    {
+        return $this->_bucket;
+    }
+
     /**
     //* 设置http库的请求超时时间，单位秒
      *
