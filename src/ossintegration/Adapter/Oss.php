@@ -6,7 +6,7 @@ use OSS\OssClient;
 use OSS\Core\OssException;
 
 
-class Oss implements AdapterInterface
+class Oss extends AbstractAdapter
 {
     private $_ossClient = null;
     private $_bucket = null;
@@ -74,12 +74,22 @@ class Oss implements AdapterInterface
 
     /**
      * @desc 本地文件上传到oss
-     * @param $source
-     * @param $dest
+     * @param $source 本地文件全路径
+     * @param $dest oss object name
      * @throws OssException
      */
     public function put_file($source, $dest)
     {
         $this->_ossClient->uploadFile($this->_bucket, $dest, $source);
+    }
+
+    /**
+     * @desc oss系统自己的特性方法访问入口
+     * @param $name
+     * @param $arguments
+     */
+    public function __call($name, $arguments)
+    {
+        call_user_func_array(array($this->_ossClient, $name), $arguments);
     }
 }
