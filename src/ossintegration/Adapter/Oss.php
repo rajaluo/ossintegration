@@ -95,6 +95,6 @@ class Oss extends AbstractAdapter
      */
     public function __call($name, $arguments)
     {
-        call_user_func_array(array($this->_ossClient, $name), $arguments);
+        return call_user_func_array(array($this->_ossClient, $name), $arguments);
     }
 }
