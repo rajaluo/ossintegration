@@ -7,7 +7,7 @@ use ossintegration\MountManager;
 
 $prefixpath = '/Users/emily/data/';
 $local = new Local($prefixpath);
-$ossAliyun = new Oss('qukan-test', 'SBns8nHSboF7cItp', 'sWuCgC58sEfbugEQknj46kaxTqn4r2', 'http://oss-cn-beijing.aliyuncs.com');
+$ossAliyun = new Oss('*', '*', '*', '*');
 $fileSys = ['local' => $local, 'oss' => $ossAliyun];
 $manager = new MountManager($fileSys);
 
